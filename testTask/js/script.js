@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll("button");
 const sectionWrapper = document.querySelector(".content__wrapper");
 const buttonSearchName = document.getElementById("searchPokemon");
 const butttonSearchType = document.getElementById("searchTypePokemon");
-let sec = 0.1;
+// let sec = 0.1;
 
 /******* create objects *******/
 function createObject(pokemon) {
@@ -47,7 +47,7 @@ function createObject(pokemon) {
   mainDiv.classList.add('animate__animated');
   mainDiv.classList.add('wow');
   
-  mainDiv.setAttribute('data-wow-delay',`${sec.toFixed(3)}s`);
+  // mainDiv.setAttribute('data-wow-delay',`${sec.toFixed(3)}s`);
   
   // Add to section
   sectionWrapper.appendChild(mainDiv);
@@ -69,7 +69,7 @@ buttons.forEach((element) => {
         const res = await fetch(url);
         const pokemon = await res.json();
         createObject(pokemon);
-        sec+=0.002;
+        // sec+=0.002;
       }
     };
     getPocemon(1);
@@ -108,7 +108,8 @@ buttonSearchName.addEventListener("click", function () {
         const res = await fetch(url);
         const pokemon = await res.json();
         createObject(pokemon);
-        sec+=0.002;
+        // sec+=0.002;
+
       } catch (error) {
         let errorMes = document.createElement("div");
         errorMes.innerHTML = `There is not pokemon named ${name}`;
@@ -164,7 +165,7 @@ butttonSearchType.addEventListener("click", function () {
         for (let j = 0; j < checkBoxesValue.length; j++) {
           if (pokemon.types[0].type.name == checkBoxesValue[j] && radioBoxesValueArray[j] != 0) {
             createObject(pokemon);
-            sec+=0.002;
+            // sec+=0.002;
             if (--radioBoxesValueArray[j] === 0) {
               repeatElements++;
             }
