@@ -1,0 +1,160 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+}
+
+@import 'reboot.min.scss';
+@import 'fonts';
+
+@import 'media';
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Raleway, sans-serif;
+    overflow-x: hidden!important;
+
+    position: relative;
+    background-color: #000;
+}
+
+.container{
+    width: 1440px;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    // flex-direction: column;
+    &__type{
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+    }
+    &__first,
+    &__search,
+    &__type{
+        border: 1px solid black;
+        margin: 15px;
+        padding: 15px;
+    }
+}
+
+input{
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    font-weight: 600;
+
+}
+
+.button{
+    font-size: 2rem;
+    width: 100px;
+    color:#f7f5bc;
+    background-color: #000;
+    padding: 15px;
+    transition: .3s all;
+    margin: 5px;
+    border-radius: 15px;
+    font-weight: 700;
+    outline: none;
+
+    &__type{
+        width: 200px;
+       
+    }
+
+    &:hover{
+        color: #000;
+        background-color: #f7f5bc;
+    }
+    &:focus{
+        outline: none;
+        border: 1px solid black;
+    }
+}
+
+.content{
+    // background-color: #f7f5bc;
+    padding: 100px 0;
+
+    &__wrapper{
+        display: flex;
+        min-height: inherit;
+        justify-content: center;
+        align-items: center;  
+        flex-wrap: wrap;
+    }
+    &-item{
+        padding: 20px;
+        border: 1px solid black;
+        margin: 10px 20px;
+        background-color: #fff;
+        border-radius: 7px;
+        box-shadow: 0px 0px 10px black;
+        min-height: 230px;
+        min-width: 260px;
+        text-transform: uppercase;
+        transition: .4s all;
+        &:hover{
+            transform: translateY(-35px) scale(1.1);
+            box-shadow: 0px 0px 15px black;
+        }
+    }
+    &__img{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        img{
+            display: block;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__id{
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+    &__name{
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+    }
+    &__type{
+        font-size: 1.7rem;
+    }
+    &__stats{
+        font-size: 1.65rem;
+    }
+
+}
+.result-empty{
+    font-size: 2rem;
+    font-weight: 700;
+    color: red;
+}
+
+.video{
+    position: relative;
+    &-media{
+        width: 100%;
+        height: auto;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
