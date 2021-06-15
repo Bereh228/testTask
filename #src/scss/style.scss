@@ -12,7 +12,6 @@
 @import 'reboot.min.scss';
 @import 'fonts';
 
-@import 'media';
 
 html{
     font-size: 62.5%;
@@ -133,9 +132,11 @@ input{
     }
     &__type{
         font-size: 1.7rem;
+        font-weight: 600;
     }
     &__stats{
         font-size: 1.65rem;
+        font-weight: 600;
     }
 
 }
@@ -143,18 +144,5 @@ input{
     font-size: 2rem;
     font-weight: 700;
     color: red;
-}
-
-.video{
-    position: relative;
-    &-media{
-        width: 100%;
-        height: auto;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
 }
 

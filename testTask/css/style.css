@@ -521,10 +521,12 @@ input {
 
 .content__type {
   font-size: 1.7rem;
+  font-weight: 600;
 }
 
 .content__stats {
   font-size: 1.65rem;
+  font-weight: 600;
 }
 
 .result-empty {
@@ -532,33 +534,6 @@ input {
   font-weight: 700;
   color: red;
 }
-
-.video {
-  position: relative;
-}
-
-.video-media {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-@media (max-width: 1200px) {
-  .video {
-    display: none;
-  }
-}
 @supports (-webkit-appearance:none){
-
-}
-
- @media (max-width: 1200px){
-
-@supports (-webkit-appearance:none){
-
-}
 
 }
